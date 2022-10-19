@@ -1,0 +1,10 @@
+from google.oauth2 import service_account
+from googleapiclient import _auth
+
+SCOPES = ['https://www.googleapis.com/auth/chronicle-backstory']
+SERVICE_ACCOUNT_FILE = '/customer-keys/apikeys-demo.json'
+credentials = service_account.Credentials.from_service_account_file(SERVICE_ACCOUNT_FILE, scopes=SCOPES)
+
+http_client = _auth. authorized HTTP(credentials)
+
+# <your code continues here>
